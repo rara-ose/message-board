@@ -37,11 +37,12 @@ def edit
   end
 
   private
-  def message_params
-    params.require(:message).permit(:name, :body)
+def message_params
+    params.require(:message).permit(:name, :body, :age)
   end
+
   def set_message
-    @message = Message.find(params[:id])
+    @message=Message.find(params[:id])
   end
   ## ここまで
 end

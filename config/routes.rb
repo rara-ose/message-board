@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
- root 'messages#index'
- resources :messages , only: [:create]
+  root 'messages#index'
+  resources :messages , except: [:index, :new]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -42,7 +42,7 @@ Rails.application.routes.draw do
   #     resources :sales do
   #       get 'recent', on: :collection
   #     end
-  #   end
+#   end
 
   # Example resource route with concerns:
   #   concern :toggleable do
@@ -57,5 +57,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
 
+end
